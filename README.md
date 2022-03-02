@@ -6,7 +6,7 @@ Named Entity Recognition (NER) is a challenging task that extracts named entitie
 
 ## Dataset
 
-We have turned the datasets' files into standard form like [NER](https://github.com/synalp/NER/tree/master/corpus/CoNLL-2003).
+We have turned the datasets' files into standard form like those in the repository [NER](https://github.com/synalp/NER/tree/master/corpus/CoNLL-2003).
 
 CoNLL-03: resources/tasks/conll_03
 
