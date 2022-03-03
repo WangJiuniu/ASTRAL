@@ -3,7 +3,6 @@
 ## Paper
 
 ASTRAL: adversarial trained LSTM-CNN for named entity recognition 
-
 [[Link](https://www.sciencedirect.com/science/article/abs/pii/S0950705120302136), [PDF](https://arxiv.org/abs/2009.01041)]
 
 ## Dataset
@@ -17,6 +16,37 @@ OntoNotes 5.0: resources/tasks/ontoner
 WNUT-17: resources/tasks/wnut_17
 
 Here eng.train, eng.testa, and eng.testb respectively represent tran set, dev set, and test set. The files can also be downloaded from [google drive](https://drive.google.com/file/d/1lKKjVYHt2saGV5mQOuVB65xLVINyz-B5/view?usp=sharing).
+
+## Results
+
+**Table 1** Dataset statistics. The size of datasets is in the number of entities/tokens.
+
+|Dataset |Train |Dev  |Test| Entities frequency |Entity  types|
+|  ---  | ---- | ----- |--- |--- |--- |
+|CoNLL-03 |23,499/204,567 |5,942/51,578 |5,648/46,666| 11.6% |4|
+|OntoNotes 5.0 |81,828/1,088,503 |11,066/147,724 |11,257/152,728| 7.5% |18|
+| WNUT-17|3,160/62,729 |1,250/15,733 |1,589/23,394| 5.9% |6|
+
+
+
+**Table 2** Test F1 score for different models on the datasets. In this table, ‘‘∗’’ indicates the results implemented by us, and ‘‘-’’ indicates that the performances of the models on the corresponding datasets are not yet obtained.
+
+|Model | CoNLL-03 | OntoNote 5.0 | WNUT-17|
+|  ---  | ------ | ----------- |---------- |
+|Character-LSTM [17]| 90.94| 84.86∗ |44.79∗|
+|BLSTM-CNN [12] | 91.62 |86.28 |45.14∗|
+|Stacked Multitask [18]| –| – |45.55|
+|ELMo [9]|92.22 |– | –|
+|CVT+Multitask [19]| 92.60| –| – |
+|BERT [10]|  92.81| 88.28∗| 49.23∗|
+|Contextual String Embedding [20]| 92.86 |88.75| 49.49 |
+|[ASTRAL (ours)](https://arxiv.org/abs/2009.01041)| **93.32**| **89.44**| **49.72**|
+
+
+
+## Code
+
+To be released.
 
 ## Abstract
 
